@@ -1,5 +1,6 @@
 {% assign lang = page.lang | default: 'en' %}
 {% assign copy = site.data[lang].home %}
+{% assign showcase = copy.other_projects.showcase %}
 <section id="other-projects" class="section other-projects">
   <div class="section__title">{{ copy.other_projects.title | escape_once }}</div>
   <div class="section__content">
@@ -24,5 +25,46 @@
       {% endif %}
     </div>
     {% endfor %}
+    {% if showcase and showcase.items and showcase.items.size > 0 %}
+    <div class="dao-showcase" aria-label="{{ showcase.aria_label | default: 'Dao showcase' | escape_once }}">
+      {% for item in showcase.items %}
+      <button
+        type="button"
+        class="dao-showcase__card"
+        data-dao-trigger
+        data-dao-image="{{ item.image.src | relative_url }}"
+        data-dao-alt="{{ item.image.alt | escape_once }}"
+        data-dao-title="{{ item.title | escape_once }}"
+        data-dao-description="{{ item.description | strip_newlines | escape_once }}"
+        aria-haspopup="dialog"
+        aria-label="{{ showcase.open_label | default: 'Open' | append: ': ' | append: item.title | escape_once }}">
+        <span class="dao-showcase__media">
+          <img src="{{ item.image.src | relative_url }}" alt="{{ item.image.alt | escape_once }}" loading="lazy">
+        </span>
+        <span class="dao-showcase__meta">
+          <span class="dao-showcase__title">{{ item.title | escape_once }}</span>
+          {% if item.description and item.description != '' %}
+          <span class="dao-showcase__description">{{ item.description | escape_once }}</span>
+          {% endif %}
+        </span>
+      </button>
+      {% endfor %}
+    </div>
+    <div class="dao-modal" data-dao-modal hidden>
+      <button type="button" class="dao-modal__backdrop" data-dao-close tabindex="-1" aria-hidden="true"></button>
+      <div class="dao-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="dao-modal-title">
+        <button type="button" class="dao-modal__close" data-dao-close aria-label="{{ showcase.close_label | default: 'Close' | escape_once }}">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="dao-modal__image-wrap">
+          <img class="dao-modal__image" data-dao-modal-image alt="">
+        </div>
+        <div class="dao-modal__copy">
+          <div class="dao-modal__title" id="dao-modal-title" data-dao-modal-title></div>
+          <p class="dao-modal__description" data-dao-modal-description></p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
 </section>

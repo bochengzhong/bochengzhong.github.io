@@ -1,0 +1,226 @@
+.other-projects .dao-showcase {
+  margin-top: 24px;
+  width: min(100%, 340px);
+}
+
+.other-projects .dao-showcase__card {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(54, 54, 60, 0.14);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.other-projects .dao-showcase__card:hover,
+.other-projects .dao-showcase__card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(54, 54, 60, 0.22);
+  box-shadow: 0 14px 32px rgba(23, 28, 40, 0.08);
+}
+
+.other-projects .dao-showcase__media {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4 / 5;
+  background: rgba(54, 54, 60, 0.04);
+}
+
+.other-projects .dao-showcase__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.other-projects .dao-showcase__meta {
+  display: block;
+  padding-top: 10px;
+}
+
+.other-projects .dao-showcase__title {
+  display: block;
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.other-projects .dao-showcase__description {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #444452;
+}
+
+body.dao-modal-open {
+  overflow: hidden;
+}
+
+.dao-modal[hidden] {
+  display: none;
+}
+
+.dao-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.dao-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(23, 28, 40, 0.72);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.18s ease-in-out;
+}
+
+.dao-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  padding: 18px 18px 20px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 60px rgba(23, 28, 40, 0.28);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.18s ease-in-out, transform 0.18s ease-in-out;
+}
+
+.dao-modal.is-open .dao-modal__backdrop {
+  opacity: 1;
+}
+
+.dao-modal.is-open .dao-modal__dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dao-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(54, 54, 60, 0.08);
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: background 0.2s ease-in-out;
+}
+
+.dao-modal__close:hover,
+.dao-modal__close:focus-visible {
+  background: rgba(54, 54, 60, 0.14);
+}
+
+.dao-modal__image-wrap {
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(54, 54, 60, 0.04);
+}
+
+.dao-modal__image {
+  display: block;
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  background: rgba(54, 54, 60, 0.04);
+}
+
+.dao-modal__copy {
+  padding-top: 14px;
+}
+
+.dao-modal__title {
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dao-modal__description {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444452;
+  white-space: pre-line;
+}
+
+.night .other-projects .dao-showcase__card {
+  border-color: rgba(231, 231, 231, 0.12);
+  background: rgba(23, 28, 40, 0.84);
+}
+
+.night .other-projects .dao-showcase__card:hover,
+.night .other-projects .dao-showcase__card:focus-visible {
+  border-color: rgba(231, 231, 231, 0.2);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+}
+
+.night .other-projects .dao-showcase__media,
+.night .dao-modal__image-wrap,
+.night .dao-modal__image {
+  background: rgba(231, 231, 231, 0.06);
+}
+
+.night .other-projects .dao-showcase__description,
+.night .dao-modal__description {
+  color: #afafbf;
+}
+
+.night .dao-modal__dialog {
+  background: #171c28;
+  color: #e7e7e7;
+}
+
+.night .dao-modal__close {
+  background: rgba(231, 231, 231, 0.08);
+}
+
+.night .dao-modal__close:hover,
+.night .dao-modal__close:focus-visible {
+  background: rgba(231, 231, 231, 0.14);
+}
+
+@media screen and (max-width: 768px) {
+  .other-projects .dao-showcase {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .dao-modal {
+    padding: 16px;
+  }
+
+  .dao-modal__dialog {
+    width: min(100%, 520px);
+    max-height: calc(100vh - 32px);
+    padding: 16px 16px 18px;
+  }
+
+  .dao-modal__image {
+    max-height: 52vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .other-projects .dao-showcase {
+    max-width: none;
+  }
+}

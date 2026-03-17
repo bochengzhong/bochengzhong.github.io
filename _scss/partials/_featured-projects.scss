@@ -2,20 +2,23 @@
   a:after {
     display: none;
   }
+  .section__content {
+    max-width: 680px;
+  }
   .project {
-    display: flex;
+    display: block;
     margin-bottom: 100px;
-    margin-left: -5%;
-    width: 125%;
+    margin-left: -7%;
+    width: 118%;
     @include thirteen {
-      width: 115%;
+      width: 112%;
     }
     @include desktop {
-      width: 105%;
+      width: 106%;
     }
     @include tablet {
       width: 100%;
-      display: block;
+      margin-left: 0;
       margin-bottom: 70px;
     }
     &.screentime {
@@ -25,7 +28,8 @@
       margin-bottom: 0;
     }
     &__pic {
-      max-width: 700px;
+      width: 100%;
+      max-width: none;
       overflow: visible;
       margin: 0;
       a {
@@ -45,6 +49,7 @@
           display: block;
           overflow: hidden;
           aspect-ratio: 4 / 3;
+          border-radius: 4px;
         }
       }
       &.phones {
@@ -69,25 +74,75 @@
         object-fit: cover;
       }
     }
-    &__caption {
-      width: 125px;
-      flex-shrink: 0;
-      margin-left: 30px;
+    &__header {
+      display: grid;
+      grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 22px;
       @include tablet {
-        width: 100%;
-        margin-top: 25px;
-        margin-left: 0;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 18px;
       }
     }
     &__name {
-      margin-bottom: 10px;
+      margin-bottom: 0;
+      line-height: 1.35;
       a {
         font-weight: 700;
       }
     }
+    &__summary {
+      min-width: 0;
+    }
+    &__references {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-family: 'Inconsolata', monospace;
+      font-size: 0.74rem;
+      line-height: 1.5;
+      color: $grey;
+    }
+    &__reference {
+      a,
+      span {
+        color: inherit;
+        font-weight: 400;
+      }
+      a:hover,
+      a:focus {
+        color: $black;
+      }
+    }
+    &__reference-divider {
+      color: rgba($grey, 0.7);
+    }
     p {
-      font-size: 0.85rem;
-      line-height: 1.3;
+      margin-bottom: 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+  }
+
+  .night &,
+  body.night & {
+    .project__references {
+      color: $slate;
+    }
+
+    .project__reference {
+      a:hover,
+      a:focus {
+        color: $off-white;
+      }
+    }
+
+    .project__reference-divider {
+      color: rgba($slate, 0.7);
     }
   }
 }

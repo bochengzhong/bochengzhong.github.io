@@ -4,19 +4,39 @@
   <div class="section__title">{{ copy.featured_projects.title | escape_once }}</div>
   <div class="section__content">
     {% for project in copy.featured_projects.items %}
-    <div class="project {{ project.class_name }}">
+    {% assign sorted_images = project.images | sort_natural: 'src' %}
+    <article class="project {{ project.class_name }}">
+      <div class="project__header">
+        <div class="project__name">
+          {% if project.url and project.url != '' %}
+          <a href="{{ project.url }}" target="_blank" rel="noreferrer">{{ project.name | escape_once }}</a>
+          {% else %}
+          <span>{{ project.name | escape_once }}</span>
+          {% endif %}
+        </div>
+        <div class="project__summary">
+          <p>{{ project.description }}</p>
+          {% if project.references and project.references.size > 0 %}
+          <div class="project__references">
+            {% for reference in project.references %}
+            <span class="project__reference">
+              {% if reference.url and reference.url != '' %}
+              <a href="{{ reference.url }}" target="_blank" rel="noreferrer">{{ reference.label | escape_once }}</a>
+              {% else %}
+              <span>{{ reference.label | escape_once }}</span>
+              {% endif %}
+            </span>{% unless forloop.last %}<span class="project__reference-divider" aria-hidden="true">/</span>{% endunless %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
       <figure class="project__pic{% if project.layout == 'phones' %} phones{% elsif project.layout == 'gallery' %} gallery{% endif %}">
         {% if project.layout == 'gallery' %}
-          {% for image in project.images %}
-            {% if project.url and project.url != '' %}
-        <a class="project__gallery-item" href="{{ project.url }}" target="_blank">
-          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
-        </a>
-            {% else %}
+          {% for image in sorted_images %}
         <div class="project__gallery-item">
           <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
         </div>
-            {% endif %}
           {% endfor %}
         {% elsif project.url and project.url != '' %}
         <a href="{{ project.url }}" target="_blank">
@@ -44,17 +64,7 @@
           {% endif %}
         {% endif %}
       </figure>
-      <figcaption class="project__caption">
-        <div class="project__name">
-          {% if project.url and project.url != '' %}
-          <a href="{{ project.url }}" target="_blank">{{ project.name | escape_once }}</a>
-          {% else %}
-          <span>{{ project.name | escape_once }}</span>
-          {% endif %}
-        </div>
-        <p>{{ project.description }}</p>
-      </figcaption>
-    </div>
+    </article>
     {% endfor %}
   </div>
 </section>

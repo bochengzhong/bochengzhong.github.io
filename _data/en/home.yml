@@ -6,7 +6,7 @@ meta:
   site_name: Bocheng Zhong
   twitter_site: ""
   twitter_creator: ""
-  logo: /img/emojis/technologist.png
+  logo: /img/logo/logo1.png
   cover: /img/og.png
 topbar:
   nav_aria_label: Primary navigation
@@ -142,6 +142,10 @@ featured_projects:
         different materials in VR. The work grew from an early prototype into a more complete
         interactive system, resulting in 2 conference publications and 1 Chinese invention patent
         publication.
+      references:
+        - label: ISMAR Adjunct 2025 paper
+          url: https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00127
+        - label: Chinese invention patent publication
       images:
         - src: /img/featured/hearing-material/01-h3.jpg
           alt: Hearing Material physical material recording setup
@@ -174,6 +178,17 @@ other_projects:
       url: ""
       description: Set 0 every day.
       used: []
+  showcase:
+    aria_label: Dao showcase
+    open_label: Open post
+    close_label: Close
+    items:
+      - slug: chi25
+        title: CHI 25
+        description: CHI 25 tour
+        image:
+          src: /img/dao/chi25.png
+          alt: Bocheng Zhong at CHI 25
 footer:
   title: Contact
   subtitle: Bocheng Zhong

@@ -46,7 +46,97 @@
   display: block;
 }
 
+.featured-projects .section__content {
+  max-width: 680px;
+}
+
+.featured-projects .project {
+  display: block;
+  margin-left: -7%;
+  width: 118%;
+}
+
+.featured-projects .project__header {
+  display: grid;
+  grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+
+.featured-projects .project__summary {
+  min-width: 0;
+}
+
+.featured-projects .project__name {
+  margin-bottom: 0;
+  line-height: 1.35;
+}
+
+.featured-projects .project p {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.featured-projects .project__references {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: #777777;
+}
+
+.featured-projects .project__reference a,
+.featured-projects .project__reference span {
+  color: inherit;
+  font-weight: 400;
+}
+
+.featured-projects .project__reference a:hover,
+.featured-projects .project__reference a:focus {
+  color: #36363c;
+}
+
+.featured-projects .project__reference-divider {
+  color: rgba(119, 119, 119, 0.7);
+}
+
+.night .featured-projects .project__references,
+body.night .featured-projects .project__references {
+  color: #afafbf;
+}
+
+.night .featured-projects .project__reference a:hover,
+.night .featured-projects .project__reference a:focus,
+body.night .featured-projects .project__reference a:hover,
+body.night .featured-projects .project__reference a:focus {
+  color: #e7e7e7;
+}
+
+.night .featured-projects .project__reference-divider,
+body.night .featured-projects .project__reference-divider {
+  color: rgba(175, 175, 191, 0.7);
+}
+
+.featured-projects .project__pic {
+  width: 100%;
+  max-width: none;
+}
+
+.featured-projects .project__pic.gallery .project__gallery-item {
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 1024px) {
+  .featured-projects .project {
+    width: 106%;
+  }
+
   .featured-projects .project__pic.gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -65,6 +155,17 @@
     flex-basis: auto;
     width: min(58vw, 300px);
     max-width: 300px;
+  }
+
+  .featured-projects .project {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .featured-projects .project__header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
   }
 }
 

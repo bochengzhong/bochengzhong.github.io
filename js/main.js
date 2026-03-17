@@ -122,6 +122,110 @@ $(function() {
     });
   }
 
+  const daoModal = document.querySelector('[data-dao-modal]');
+  const daoTriggers = Array.from(document.querySelectorAll('[data-dao-trigger]'));
+
+  if (daoModal && daoTriggers.length) {
+    const daoModalImage = daoModal.querySelector('[data-dao-modal-image]');
+    const daoModalTitle = daoModal.querySelector('[data-dao-modal-title]');
+    const daoModalDescription = daoModal.querySelector('[data-dao-modal-description]');
+    const daoCloseElements = Array.from(daoModal.querySelectorAll('[data-dao-close]'));
+    let lastFocusedElement = null;
+    let closeTimer = null;
+
+    function clearDaoCloseTimer() {
+      if (closeTimer) {
+        window.clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+    }
+
+    function populateDaoModal(trigger) {
+      if (daoModalImage) {
+        daoModalImage.src = trigger.dataset.daoImage || '';
+        daoModalImage.alt = trigger.dataset.daoAlt || '';
+      }
+
+      if (daoModalTitle) {
+        daoModalTitle.textContent = trigger.dataset.daoTitle || '';
+      }
+
+      if (daoModalDescription) {
+        daoModalDescription.textContent = trigger.dataset.daoDescription || '';
+      }
+    }
+
+    function openDaoModal(trigger) {
+      lastFocusedElement = trigger;
+      clearDaoCloseTimer();
+      populateDaoModal(trigger);
+      daoModal.hidden = false;
+      body.classList.add('dao-modal-open');
+
+      window.requestAnimationFrame(function() {
+        daoModal.classList.add('is-open');
+      });
+
+      const closeButton = daoModal.querySelector('.dao-modal__close');
+
+      if (closeButton) {
+        closeButton.focus();
+      }
+    }
+
+    function closeDaoModal() {
+      if (daoModal.hidden) {
+        return;
+      }
+
+      daoModal.classList.remove('is-open');
+      body.classList.remove('dao-modal-open');
+      clearDaoCloseTimer();
+      closeTimer = window.setTimeout(function() {
+        daoModal.hidden = true;
+
+        if (daoModalImage) {
+          daoModalImage.removeAttribute('src');
+          daoModalImage.alt = '';
+        }
+
+        if (daoModalTitle) {
+          daoModalTitle.textContent = '';
+        }
+
+        if (daoModalDescription) {
+          daoModalDescription.textContent = '';
+        }
+
+        if (lastFocusedElement) {
+          lastFocusedElement.focus();
+          lastFocusedElement = null;
+        }
+
+        closeTimer = null;
+      }, 180);
+    }
+
+    daoTriggers.forEach(trigger => {
+      trigger.addEventListener('click', function() {
+        openDaoModal(this);
+      });
+    });
+
+    daoCloseElements.forEach(element => {
+      element.addEventListener('click', function(event) {
+        event.preventDefault();
+        closeDaoModal();
+      });
+    });
+
+    window.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && !daoModal.hidden) {
+        closeDaoModal();
+      }
+    });
+  }
+
   if (window.ScrollReveal) {
     window.sr = ScrollReveal({
       reset: false,
