@@ -5,6 +5,7 @@
   <div class="section__content">
     {% for project in copy.other_projects.items %}
     <div class="project">
+      {% if project.name and project.name != '' %}
       <div class="project__name">
         {% if project.url and project.url != '' %}
         <a href="{{ project.url }}" target="_blank" class="arrow-link">{{ project.name | escape_once }}</a>
@@ -12,6 +13,7 @@
         <strong>{{ project.name | escape_once }}</strong>
         {% endif %}
       </div>
+      {% endif %}
       <p>{{ project.description }}</p>
       {% if project.used and project.used.size > 0 %}
       <div class="project__used">

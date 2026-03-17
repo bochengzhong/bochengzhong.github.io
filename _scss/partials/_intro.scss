@@ -2,18 +2,57 @@
   padding: 120px 100px;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
   max-width: 1440px;
   margin: 0 auto;
   @include weird-medium {
     padding: 120px 70px;
+  }
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    height: auto;
+    min-height: 100vh;
   }
   @include phablet {
     padding: 120px 50px;
   }
   @include mobile {
     padding: 70px 50px;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__media {
+    flex: 0 0 clamp(220px, 25vw, 320px);
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+    @include tablet {
+      flex-basis: auto;
+      width: min(58vw, 300px);
+      max-width: 300px;
+    }
+    @include mobile {
+      width: min(62vw, 260px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__hello, &__tagline {

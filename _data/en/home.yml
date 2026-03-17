@@ -27,10 +27,10 @@ topbar:
       label: Experience
     - id: featured-projects
       href: "#featured-projects"
-      label: Selected Projects
+      label: Project
     - id: other-projects
       href: "#other-projects"
-      label: Notes
+      label: Dao
     - id: footer
       href: "#footer"
       label: Contact
@@ -55,13 +55,21 @@ intro:
   suffix: " working across hardware, audio, sensing, and interactive systems."
   contact_label: I build prototypes, validate ideas, and turn technical concepts into usable experiences, with strengths in hardware development, system integration, and product-oriented thinking.
   email: zhongbc87@qq.com
+  image:
+    src: /img/featured/intro/bc-1.jpg
+    alt: Portrait of Bocheng Zhong
 background:
   title: Background
   paragraphs:
     - >-
-      My work combines hardware, prototyping, audio, sensing, and interaction. Audio is one of my
-      strengths, but I am equally interested in how technology is built, validated, and shaped into
-      real products.
+      My work combines hardware development, prototyping, audio, sensing, and interactive
+      experience. Audio is one of my strengths, but I am equally interested in how technical
+      systems are built and shaped into real products.
+    - >-
+      I care about the full path from concept to implementation — from early exploration and
+      prototyping to testing, iteration, and user-facing experience. My interests span hardware,
+      PCB, 3D modeling, interactive design, and AI-assisted workflows, with a focus on making
+      technology both functional and meaningful.
     - >-
       Related groups:
       <a class="underline-link" href="https://soundstudiesgroup.net/" target="_blank" rel="noreferrer">Sound Studies Group</a>
@@ -117,16 +125,16 @@ experience:
     - company: Insta360
       url: https://www.insta360.com/
       time: Shenzhen, China | Aug 2025 - Nov 2025
-      position: Worked on audio hardware evaluation and validation for camera-related products, including microphones, speakers, codecs, and amplifiers. Also supported wind-noise investigation, interference testing, and multi-scenario validation.
+      position: Worked on audio hardware evaluation and validation for camera-related products, including microphones, speakers, codecs, and amplifiers. Also supported wind-noise investigation, interference testing, and multi-scenario validation. Contributed to comparing materials, structures, and accessory solutions in practical product contexts, and gained experience collaborating across hardware-related development and testing workflows.
     - company: Hikvision
       url: https://www.hikvision.com/
       time: Hangzhou, China | Jun 2025 - Aug 2025
-      position: Worked on component testing, acoustic integration, and system validation across multiple product types, with hands-on experience in tuning, debugging, and performance analysis.
+      position: Worked on component testing, acoustic integration, and system validation across multiple product types, with hands-on experience in tuning, debugging, and performance analysis. This experience strengthened my understanding of how component behavior, structure, and system-level requirements come together in real product development.
 featured_projects:
-  title: Selected Projects
+  title: Project
   items:
     - class_name: hearing-material
-      layout: single
+      layout: gallery
       name: "Hearing Material: Dynamic Auditory Feedback for Material Perception in VR"
       url: https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00127
       description: >-
@@ -135,34 +143,36 @@ featured_projects:
         interactive system, resulting in 2 conference publications and 1 Chinese invention patent
         publication.
       images:
-        - src: /img/featured/hearing-material/teaser.png
-          alt: Hearing Material prototype overview
+        - src: /img/featured/hearing-material/01-h3.jpg
+          alt: Hearing Material physical material recording setup
+        - src: /img/featured/hearing-material/02-hearing-5.png
+          alt: Hearing Material sensing hardware prototype
+        - src: /img/featured/hearing-material/03-reality-virtual.png
+          alt: Hearing Material physical and virtual interaction comparison
+        - src: /img/featured/hearing-material/04-recording.jpg
+          alt: Hearing Material recording session
+        - src: /img/featured/hearing-material/05-synthesizer.jpg
+          alt: Hearing Material hardware prototype
     - class_name: virtual-concert
-      layout: single
+      layout: gallery
       name: Sound Field Reproduction for Virtual Concerts
       url: https://soundstudiesgroup.net/
       description: >-
         A research project on immersive spatial audio for virtual concert experiences, combining
         multichannel recording, spatial audio workflow, and VR integration.
       images:
-        - src: /img/featured/virtual-concert/reality-virtual.png
-          alt: Virtual concert and spatial audio project overview
-    - class_name: wind-energy
-      layout: single
-      name: Triboelectric Nanogenerator-Based Wind Energy Harvesting System
-      url: ""
-      description: >-
-        An undergraduate engineering project on low-power wind energy harvesting, involving
-        structural design, simulation, and prototype testing.
-      images:
-        - src: /img/featured/wind-energy/prototype.png
-          alt: Hardware prototype and test setup
+        - src: /img/featured/virtual-concert/01-vr-jazz.png
+          alt: Virtual concert jazz venue and simulation scene
+        - src: /img/featured/virtual-concert/02-vr-music.png
+          alt: Virtual concert spatial audio layout
+        - src: /img/featured/virtual-concert/03-vr-music-3.png
+          alt: Virtual concert venue recording context
 other_projects:
-  title: Notes
+  title: Dao
   items:
-    - name: "BC' Dao"
+    - name: ""
       url: ""
-      description: Reset every day.
+      description: Set 0 every day.
       used: []
 footer:
   title: Contact

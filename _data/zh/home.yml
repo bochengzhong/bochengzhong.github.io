@@ -27,10 +27,10 @@ topbar:
       label: 经历
     - id: featured-projects
       href: "#featured-projects"
-      label: 精选项目
+      label: 项目
     - id: other-projects
       href: "#other-projects"
-      label: 笔记
+      label: 道
     - id: footer
       href: "#footer"
       label: 联系
@@ -55,12 +55,16 @@ intro:
   suffix: "，关注硬件、音频、传感与交互系统。"
   contact_label: 我擅长把技术概念做成可验证的原型与可用体验，具备硬件开发、系统集成和产品思维方面的能力。
   email: zhongbc87@qq.com
+  image:
+    src: /img/featured/intro/bc-1.jpg
+    alt: 钟伯诚个人照片
 background:
   title: 背景
   paragraphs:
     - >-
-      我的工作结合了硬件开发、原型制作、音频、传感与交互设计。声音是我的优势之一，但我同样关心技术如何被实现、
-      验证，并最终成为真正可用的产品。
+      我的工作结合了硬件开发、原型制作、音频、传感与交互体验。声音是我的优势之一，但我同样关注技术系统如何被实现，并最终成为真正可用的产品。
+    - >-
+      我也关心一个想法从概念到落地的完整过程，包括前期探索、原型制作、测试验证、迭代优化，以及最终面向用户的体验表达。我的兴趣覆盖硬件、PCB、3D 建模、交互设计与 AI 辅助工作流，重点是让技术既能工作，也有实际意义。
     - >-
       相关研究组：
       <a class="underline-link" href="https://soundstudiesgroup.net/" target="_blank" rel="noreferrer">Sound Studies Group</a>
@@ -116,47 +120,50 @@ experience:
     - company: Insta360 影石
       url: https://www.insta360.com/
       time: 深圳，中国 | 2025.08 - 2025.11
-      position: 参与相机相关产品的音频硬件评估与验证，涉及麦克风、扬声器、codec 和功放等器件，也参与了风噪、干扰和多场景验证工作。
+      position: 参与相机相关产品的音频硬件评估与验证，涉及麦克风、扬声器、codec 和功放等器件，也参与了风噪、干扰和多场景验证工作。在实际产品场景中参与材料、结构和配件方案的对比分析，也进一步积累了与硬件开发和测试流程协同推进的经验。
     - company: Hikvision 海康威视
       url: https://www.hikvision.com/
       time: 杭州，中国 | 2025.06 - 2025.08
-      position: 参与多类产品的器件测试、声学集成与系统验证，积累了调试、分析和性能验证经验。
+      position: 参与多类产品的器件测试、声学集成与系统验证，积累了调试、分析和多场景验证经验。这段经历也让我更理解器件表现、结构设计与系统级需求如何在真实产品开发中相互影响和配合。
 featured_projects:
-  title: 精选项目
+  title: 项目
   items:
     - class_name: hearing-material
-      layout: single
+      layout: gallery
       name: "Hearing Material：基于动态听觉反馈的 VR 材料感知项目"
       url: https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00127
       description: >-
         这是一个分两个阶段推进的项目，探索如何利用动态声音在 VR 中形成不同材料触感的错觉。项目从早期原型发展为更完整的交互系统，并产出 2 篇会议论文和 1 项中国发明专利公开。
       images:
-        - src: /img/featured/hearing-material/teaser.png
-          alt: Hearing Material 项目概览
+        - src: /img/featured/hearing-material/01-h3.jpg
+          alt: Hearing Material 材料录音装置
+        - src: /img/featured/hearing-material/02-hearing-5.png
+          alt: Hearing Material 传感硬件原型
+        - src: /img/featured/hearing-material/03-reality-virtual.png
+          alt: Hearing Material 现实与虚拟交互对照
+        - src: /img/featured/hearing-material/04-recording.jpg
+          alt: Hearing Material 录音场景
+        - src: /img/featured/hearing-material/05-synthesizer.jpg
+          alt: Hearing Material 硬件原型
     - class_name: virtual-concert
-      layout: single
+      layout: gallery
       name: 虚拟音乐会声场重建
       url: https://soundstudiesgroup.net/
       description: >-
         一个面向沉浸式虚拟音乐会体验的研究项目，结合多通道录音、空间音频处理与 VR 集成。
       images:
-        - src: /img/featured/virtual-concert/reality-virtual.png
-          alt: 虚拟音乐会与空间音频项目概览
-    - class_name: wind-energy
-      layout: single
-      name: 基于摩擦纳米发电机的风能采集系统
-      url: ""
-      description: >-
-        本科阶段的工程项目，围绕低功耗风能采集展开，包含结构设计、仿真与原型测试。
-      images:
-        - src: /img/featured/wind-energy/prototype.png
-          alt: 硬件原型与测试装置
+        - src: /img/featured/virtual-concert/01-vr-jazz.png
+          alt: 虚拟音乐会爵士场景与模拟画面
+        - src: /img/featured/virtual-concert/02-vr-music.png
+          alt: 虚拟音乐会空间音频布局
+        - src: /img/featured/virtual-concert/03-vr-music-3.png
+          alt: 虚拟音乐会录音场景
 other_projects:
-  title: 笔记
+  title: 道
   items:
-    - name: 道
+    - name: ""
       url: ""
-      description: 反复清零
+      description: 反复清零。
       used: []
 footer:
   title: 联系方式

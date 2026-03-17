@@ -1,20 +1,27 @@
 {% assign lang = page.lang | default: 'en' %}
 {% assign copy = site.data[lang].home %}
 <header id="intro" class="intro">
-  <h1 class="intro__hello">{{ copy.intro.hello | escape_once }}
-    <span class="emoji wave-hand animated"></span>
-  </h1>
+  <div class="intro__content">
+    <h1 class="intro__hello">{{ copy.intro.hello | escape_once }}
+      <span class="emoji wave-hand animated"></span>
+    </h1>
 
-  <h2 class="intro__tagline">{{ copy.intro.prefix | escape_once }}
-    <span class="name">{{ copy.intro.name | escape_once }}</span>{{ copy.intro.suffix | escape_once }}
-    <span class="emoji technologist"></span>
-  </h2>
+    <h2 class="intro__tagline">{{ copy.intro.prefix | escape_once }}
+      <span class="name">{{ copy.intro.name | escape_once }}</span>{{ copy.intro.suffix | escape_once }}
+    </h2>
 
-  <h3 class="intro__contact">
-    <span>{{ copy.intro.contact_label | escape_once }}</span>
-    <span class="emoji pointer"></span>
-    <span>
-      <a href="mailto:{{ copy.intro.email }}" target="_blank" class="highlight-link">{{ copy.intro.email }}</a>
-    </span>
-  </h3>
+    <h3 class="intro__contact">
+      <span>{{ copy.intro.contact_label | escape_once }}</span>
+      <span class="emoji pointer"></span>
+      <span>
+        <a href="mailto:{{ copy.intro.email }}" target="_blank" class="highlight-link">{{ copy.intro.email }}</a>
+      </span>
+    </h3>
+  </div>
+
+  {% if copy.intro.image and copy.intro.image.src %}
+  <figure class="intro__media">
+    <img src="{{ copy.intro.image.src | relative_url }}" alt="{{ copy.intro.image.alt | escape_once }}">
+  </figure>
+  {% endif %}
 </header>

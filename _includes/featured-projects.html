@@ -5,8 +5,20 @@
   <div class="section__content">
     {% for project in copy.featured_projects.items %}
     <div class="project {{ project.class_name }}">
-      <figure class="project__pic{% if project.layout == 'phones' %} phones{% endif %}">
-        {% if project.url and project.url != '' %}
+      <figure class="project__pic{% if project.layout == 'phones' %} phones{% elsif project.layout == 'gallery' %} gallery{% endif %}">
+        {% if project.layout == 'gallery' %}
+          {% for image in project.images %}
+            {% if project.url and project.url != '' %}
+        <a class="project__gallery-item" href="{{ project.url }}" target="_blank">
+          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+        </a>
+            {% else %}
+        <div class="project__gallery-item">
+          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+        </div>
+            {% endif %}
+          {% endfor %}
+        {% elsif project.url and project.url != '' %}
         <a href="{{ project.url }}" target="_blank">
           {% if project.layout == 'phones' %}
             {% for image in project.images %}

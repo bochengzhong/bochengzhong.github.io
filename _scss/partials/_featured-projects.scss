@@ -31,6 +31,22 @@
       a {
         display: block;
       }
+      &.gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        @include desktop {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include mobile {
+          grid-template-columns: 1fr;
+        }
+        .project__gallery-item {
+          display: block;
+          overflow: hidden;
+          aspect-ratio: 4 / 3;
+        }
+      }
       &.phones {
         a {
           display: flex;
@@ -47,6 +63,10 @@
         width: 100%;
         max-width:100%;
         vertical-align: bottom;
+      }
+      &.gallery img {
+        height: 100%;
+        object-fit: cover;
       }
     }
     &__caption {
