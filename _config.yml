@@ -1,7 +1,7 @@
 # Site settings
 name: Bocheng Zhong
-title: Bocheng Zhong | Hardware Product Manager Candidate
-description: Hardware product manager candidate with hands-on experience in audio hardware, prototyping, validation, and user-centered product development
+title: Bocheng Zhong | Technical Developer & Researcher
+description: Technical developer and researcher with hands-on experience in hardware, audio, sensing, prototyping, and product-oriented system building
 url: https://bochengzhong.github.io
 baseurl: ''
 email: zhongbc87@qq.com
@@ -11,6 +11,10 @@ resume: ''
 social:
   - title: email
     url: mailto:zhongbc87@qq.com
+  - title: linkedin
+    url: https://www.linkedin.com/in/bocheng-zhong-742283355
+  - title: github
+    url: https://github.com/bochengzhong
 
 # Build settings
 markdown: kramdown

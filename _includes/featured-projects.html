@@ -6,6 +6,7 @@
     {% for project in copy.featured_projects.items %}
     <div class="project {{ project.class_name }}">
       <figure class="project__pic{% if project.layout == 'phones' %} phones{% endif %}">
+        {% if project.url and project.url != '' %}
         <a href="{{ project.url }}" target="_blank">
           {% if project.layout == 'phones' %}
             {% for image in project.images %}
@@ -18,10 +19,26 @@
           <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
           {% endif %}
         </a>
+        {% else %}
+          {% if project.layout == 'phones' %}
+            {% for image in project.images %}
+          <div class="phone">
+            <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+          </div>
+            {% endfor %}
+          {% else %}
+            {% assign image = project.images | first %}
+          <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}">
+          {% endif %}
+        {% endif %}
       </figure>
       <figcaption class="project__caption">
         <div class="project__name">
+          {% if project.url and project.url != '' %}
           <a href="{{ project.url }}" target="_blank">{{ project.name | escape_once }}</a>
+          {% else %}
+          <span>{{ project.name | escape_once }}</span>
+          {% endif %}
         </div>
         <p>{{ project.description }}</p>
       </figcaption>

@@ -6,14 +6,20 @@
     {% for project in copy.other_projects.items %}
     <div class="project">
       <div class="project__name">
+        {% if project.url and project.url != '' %}
         <a href="{{ project.url }}" target="_blank" class="arrow-link">{{ project.name | escape_once }}</a>
+        {% else %}
+        <strong>{{ project.name | escape_once }}</strong>
+        {% endif %}
       </div>
       <p>{{ project.description }}</p>
+      {% if project.used and project.used.size > 0 %}
       <div class="project__used">
         {% for item in project.used %}
         <span class="project__used__item">{{ item | escape_once }}</span>
         {% endfor %}
       </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>

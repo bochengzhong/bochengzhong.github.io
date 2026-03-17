@@ -8,11 +8,17 @@
       <div class="job">
         <div class="time-place">
           <div class="job__company">
+            {% if job.url and job.url != '' %}
             <a href="{{ job.url }}" target="_blank">{{ job.company | escape_once }}</a>
+            {% else %}
+            <span>{{ job.company | escape_once }}</span>
+            {% endif %}
           </div>
           <div class="job__time">{{ job.time | escape_once }}</div>
         </div>
+        {% if job.position and job.position != '' %}
         <div class="job__position">{{ job.position | escape_once }}</div>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
