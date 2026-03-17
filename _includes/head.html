@@ -1,0 +1,58 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign copy = site.data[lang].home %}
+{% assign page_title = page.title | default: copy.meta.title | default: site.title %}
+{% assign page_description = page.description | default: copy.meta.description | default: site.description %}
+{% assign page_url = page.url | absolute_url %}
+{% assign page_locale = copy.meta.locale | default: 'en_US' %}
+{% assign site_name = copy.meta.site_name | default: site.name %}
+{% assign cover_url = copy.meta.cover | absolute_url %}
+{% assign logo_url = copy.meta.logo | relative_url %}
+<meta charset="UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{{ page_title }}</title>
+<link rel="icon" type="image/png" href="{{ logo_url }}">
+<link rel="canonical" href="{{ page_url }}">
+<link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+<link rel="alternate" hreflang="zh" href="{{ '/zh/' | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:site_name" content="{{ site_name }}">
+<meta property="og:image" content="{{ cover_url }}">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta property="og:image:type" content="image/png">
+<meta property="og:locale" content="{{ page_locale }}">
+<meta name="description" content="{{ page_description }}">
+<meta name="keywords" content="{{ copy.meta.keywords }}">
+<meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk">
+<meta itemprop="name" content="{{ page_title }}">
+<meta itemprop="description" content="{{ page_description }}">
+<meta itemprop="image" content="{{ cover_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="{{ page_url }}">
+<meta name="twitter:site" content="{{ copy.meta.twitter_site }}">
+<meta name="twitter:creator" content="{{ copy.meta.twitter_creator }}">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:image:src" content="{{ cover_url }}">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+<script>
+  (function() {
+    var storageKey = 'theme-preference';
+    var preference = 'auto';
+
+    try {
+      preference = window.localStorage.getItem(storageKey) || 'auto';
+    } catch (error) {}
+
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var shouldUseDark = preference === 'dark' || (preference === 'auto' && prefersDark);
+
+    document.documentElement.classList.toggle('night', shouldUseDark);
+  })();
+</script>
+<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">

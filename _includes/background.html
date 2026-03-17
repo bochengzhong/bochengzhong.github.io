@@ -1,0 +1,12 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign copy = site.data[lang].home %}
+<section id="background" class="section background">
+  <div class="section__title">{{ copy.background.title | escape_once }}</div>
+  <div class="section__content">
+    {% for paragraph in copy.background.paragraphs %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+
+    <!-- {% include employment-status.html %} -->
+  </div>
+</section>

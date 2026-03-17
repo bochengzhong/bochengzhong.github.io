@@ -1,0 +1,199 @@
+meta:
+  title: Bocheng Zhong | 硬件产品经理候选人
+  description: 硬件产品经理候选人，具备音频硬件、原型开发、验证测试和面向用户的产品开发经验
+  locale: zh_CN
+  keywords: 硬件产品经理, 音频硬件, 原型开发, 验证测试, 消费电子, Bocheng Zhong
+  site_name: Bocheng Zhong
+  twitter_site: ""
+  twitter_creator: ""
+  logo: /img/emojis/technologist.png
+  cover: /img/og.png
+topbar:
+  nav_aria_label: 主导航
+  language_label: 语言
+  theme_label: 主题
+  nav:
+    - id: intro
+      href: "#intro"
+      label: 开场
+    - id: background
+      href: "#background"
+      label: 背景
+    - id: skills
+      href: "#skills"
+      label: 技能
+    - id: experience
+      href: "#experience"
+      label: 经历
+    - id: featured-projects
+      href: "#featured-projects"
+      label: 代表工作
+    - id: other-projects
+      href: "#other-projects"
+      label: 更多
+    - id: footer
+      href: "#footer"
+      label: 联系
+  languages:
+    - code: en
+      label: EN
+      href: /
+    - code: zh
+      label: 中文
+      href: /zh/
+  theme_options:
+    - value: light
+      label: 浅色
+    - value: dark
+      label: 深色
+    - value: auto
+      label: 自动
+intro:
+  hello: 你好！
+  prefix: "我是 "
+  name: Bocheng Zhong
+  suffix: "，一名硬件产品经理候选人，具备音频硬件、原型开发、验证测试，以及把用户需求落到可用产品上的实操经验"
+  contact_label: 联系我
+  email: zhongbc87@qq.com
+background:
+  title: 背景
+  paragraphs:
+    - >-
+      我希望进入硬件产品经理方向，但我的起点并不是纯策略岗位，而是扎实的工程一线经验。在
+      <a class="underline-link" href="https://www.insta360.com/" target="_blank" rel="noreferrer">Insta360</a> 和
+      <a class="underline-link" href="https://www.hikvision.com/" target="_blank" rel="noreferrer">Hikvision</a>，
+      我参与过麦克风、扬声器、编解码器、功放以及声学/结构集成相关工作，覆盖消费电子真实产品场景。
+    - >-
+      我的工作不只是在实验室做测试，还包括器件评估、系统调试、风噪问题分析、麦克风布局分析，以及面向 10+
+      使用场景的验证方案制定。我习惯在用户场景、技术约束和跨团队协作之间来回切换，把问题推进到可落地的方案。
+    - >-
+      除了实习，我也主导过结合传感、音频和用户测试的交互硬件原型。我更喜欢把模糊的产品想法做成可运行系统，
+      用真实反馈推动判断，而不是停留在“研究概念”层面。
+skills:
+  title: 技能
+  categories:
+    - label: 产品
+      items:
+        - 产品定义
+        - 用户场景分析
+        - 验证规划
+        - 对比测试
+        - 跨团队协作
+        - 迭代决策
+    - label: 硬件
+      items:
+        - 麦克风与扬声器
+        - 编解码器与功放
+        - 声学/结构集成
+        - 腔体结构分析
+        - 材料选型
+        - 系统调试
+    - label: 原型
+      items:
+        - 原型搭建
+        - 传感系统
+        - 实验设计
+        - 失效分析
+        - 多场景验证
+        - 实时音频交互
+    - label: 工具
+      items:
+        - SoundCheck
+        - Audio Precision
+        - ABTECH
+        - REW
+        - Adobe Audition
+        - AutoCAD
+        - Siemens NX
+        - Python
+experience:
+  title: 经历
+  resume_label: ""
+  jobs:
+    - company: Insta360
+      url: https://www.insta360.com/
+      time: 2025.08 - 2025.11
+      position: 音频硬件实习生
+    - company: Hikvision
+      url: https://www.hikvision.com/
+      time: 2025.06 - 2025.08
+      position: 音频工程实习生
+    - company: SUSTech Immersive Design Group
+      url: https://designschool.sustech.edu.cn/cn/research
+      time: 2024.08 - 2025.08
+      position: 交互音频原型项目负责人
+featured_projects:
+  title: 代表工作
+  items:
+    - class_name: hearing-material
+      layout: single
+      name: Hearing Material：用声音在 VR 中模拟材料触感
+      url: https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00127
+      description: >-
+        主导一套通过听觉反馈模拟材料质感的 VR 交互原型，从系统定义、原型搭建到验证设计全程推进。独立整合传感与音频子系统，
+        把用户体验问题转成可验证的产品假设，并最终形成 IEEE 论文和专利成果。
+      images:
+        - src: /img/featured/hearing-material/teaser.png
+          alt: Hearing Material 原型总览
+    - class_name: audio-validation
+      layout: single
+      name: Insta360 相机音频硬件验证
+      url: https://www.insta360.com/
+      description: >-
+        参与相机产品的器件评估、风噪问题分析、麦克风布局优化和 10+ 场景验证工作，在声学、结构与软件约束之间做平衡，
+        以提升真实使用中的拾音表现。
+      images:
+        - src: /img/featured/audio-validation/recording.png
+          alt: 音频硬件验证测试场景
+    - class_name: flying-microphone
+      layout: single
+      name: 面向会议场景的轻量化飞行麦克风
+      url: https://designschool.sustech.edu.cn/cn/research
+      description: >-
+        参与一款会议场景飞行麦克风概念验证，负责折叠翼结构设计、麦克风阵列集成和系统级调试，目标是提升演讲者与听众之间的交互灵活性。
+      images:
+        - src: /img/featured/flying-microphone/exhibition.jpg
+          alt: 原型展示与演示现场
+other_projects:
+  title: 更多经验
+  items:
+    - name: Hikvision 消费类音频调试与集成
+      url: https://www.hikvision.com/
+      description: >-
+        参与 10+ 类产品的麦克风、扬声器与功放选型和调试，分析频响、THD、输出能力与热表现，为声学集成和设计取舍提供依据。
+      used:
+        - 音频硬件
+        - 系统调试
+        - SoundCheck
+        - Audio Precision
+        - 集成验证
+    - name: 面向产品决策的硬件原型开发
+      url: https://www.immersivedesignresearch.com/
+      description: >-
+        更偏向“把想法做出来并验证”，而不是只停留在概念层。通过传感板、结构件、测试夹具和对比实验，尽早发现风险并支持产品判断。
+      used:
+        - 原型开发
+        - 测试
+        - 迭代
+        - 用户验证
+        - 系统集成
+    - name: 跨场景硬件产品理解
+      url: https://designschool.sustech.edu.cn/cn/research
+      description: >-
+        在消费音频、运动相机、AI 硬件以及相邻汽车场景中积累了实际问题理解，关注点始终是如何把真实使用问题转成更清晰的需求和更稳健的硬件决策。
+      used:
+        - 产品思维
+        - 用户场景
+        - 取舍判断
+        - 验证
+        - 协作
+footer:
+  designed_by: 设计与搭建
+  name: Bocheng Zhong
+  year: "2026"
+social_links:
+  - icon: email
+    label: 邮件
+    url: mailto:zhongbc87@qq.com
+employment_status:
+  message: 正在寻找硬件产品经理相关机会。

@@ -1,0 +1,35 @@
+# Site settings
+name: Bocheng Zhong
+title: Bocheng Zhong | Hardware Product Manager Candidate
+description: Hardware product manager candidate with hands-on experience in audio hardware, prototyping, validation, and user-centered product development
+url: https://bochengzhong.github.io
+baseurl: ''
+email: zhongbc87@qq.com
+cover: https://bochengzhong.github.io/img/og.png
+logo: https://bochengzhong.github.io/img/emojis/technologist.png
+resume: ''
+social:
+  - title: email
+    url: mailto:zhongbc87@qq.com
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - '*.gemspec'
+  - 'README.md'
+  - 'node_modules'
+  - 'build'
+  - 'gulpfile.js'
+  - 'package.json'
+
+keep_files:
+  - 'CNAME'
+  - '.git'
+  - '.gitignore'
+
+plugins_dir:
+  - jekyll-minifier
+  - jekyll-sitemap

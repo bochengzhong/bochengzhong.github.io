@@ -1,0 +1,20 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign copy = site.data[lang].home %}
+<section id="other-projects" class="section other-projects">
+  <div class="section__title">{{ copy.other_projects.title | escape_once }}</div>
+  <div class="section__content">
+    {% for project in copy.other_projects.items %}
+    <div class="project">
+      <div class="project__name">
+        <a href="{{ project.url }}" target="_blank" class="arrow-link">{{ project.name | escape_once }}</a>
+      </div>
+      <p>{{ project.description }}</p>
+      <div class="project__used">
+        {% for item in project.used %}
+        <span class="project__used__item">{{ item | escape_once }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

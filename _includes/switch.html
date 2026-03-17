@@ -1,0 +1,12 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign copy = site.data[lang].home %}
+<div class="switch-wrapper">
+  <span class="switch-wrapper__label">{{ copy.topbar.theme_label | escape_once }}</span>
+  <div class="theme-switch" role="group" aria-label="{{ copy.topbar.theme_label }}">
+    {% for option in copy.topbar.theme_options %}
+    <button class="theme-switch__button" type="button" data-theme-option="{{ option.value }}" aria-pressed="false">
+      {{ option.label | escape_once }}
+    </button>
+    {% endfor %}
+  </div>
+</div>

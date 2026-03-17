@@ -1,0 +1,22 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign copy = site.data[lang].home %}
+<footer id="footer" class="footer">
+  <div class="footer__copyright">
+    <div class="top">
+      <span>{{ copy.footer.designed_by }}</span>
+    </div>
+    <div class="bottom">
+      <span>{{ copy.footer.name | escape_once }}</span>
+      <img class="emoji" src="{{ site.baseurl }}/img/emojis/rockon.png" alt="emoji">
+      <span>{{ copy.footer.year | escape_once }}</span>
+    </div>
+  </div>
+  <div class="footer__links">
+    {% for link in copy.social_links %}
+    <a href="{{ link.url }}" target="_blank" title="{{ link.label | escape_once }}">
+      <span class="text">{{ link.label | escape_once }}</span>
+      <img src="{{ '/img/social/' | append: link.icon | append: '.svg' | relative_url }}" alt="{{ link.label | escape_once }}">
+    </a>
+    {% endfor %}
+  </div>
+</footer>

@@ -1,0 +1,206 @@
+meta:
+  title: Bocheng Zhong | Hardware Product Manager Candidate
+  description: Hardware product manager candidate with hands-on experience in audio hardware, prototyping, validation, and user-centered product development.
+  locale: en_US
+  keywords: hardware product manager, audio hardware, prototyping, validation, consumer electronics, Bocheng Zhong
+  site_name: Bocheng Zhong
+  twitter_site: ""
+  twitter_creator: ""
+  logo: /img/emojis/technologist.png
+  cover: /img/og.png
+topbar:
+  nav_aria_label: Primary navigation
+  language_label: Language
+  theme_label: Theme
+  nav:
+    - id: intro
+      href: "#intro"
+      label: Intro
+    - id: background
+      href: "#background"
+      label: Background
+    - id: skills
+      href: "#skills"
+      label: Skills
+    - id: experience
+      href: "#experience"
+      label: Experience
+    - id: featured-projects
+      href: "#featured-projects"
+      label: Work
+    - id: other-projects
+      href: "#other-projects"
+      label: More
+    - id: footer
+      href: "#footer"
+      label: Contact
+  languages:
+    - code: en
+      label: EN
+      href: /
+    - code: zh
+      label: 中文
+      href: /zh/
+  theme_options:
+    - value: light
+      label: Light
+    - value: dark
+      label: Dark
+    - value: auto
+      label: Auto
+intro:
+  hello: Hello!
+  prefix: "I'm "
+  name: Bocheng Zhong
+  suffix: ", a hardware product manager candidate with hands-on experience in audio hardware, prototyping, validation, and turning user needs into working products"
+  contact_label: Get in touch
+  email: zhongbc87@qq.com
+background:
+  title: Background
+  paragraphs:
+    - >-
+      I am building toward hardware product manager roles from an engineering-first foundation. At
+      <a class="underline-link" href="https://www.insta360.com/" target="_blank" rel="noreferrer">Insta360</a> and
+      <a class="underline-link" href="https://www.hikvision.com/" target="_blank" rel="noreferrer">Hikvision</a>, I worked on microphones,
+      speakers, codecs, power amplifiers, and acoustic/mechanical integration for consumer electronics.
+    - >-
+      My work has ranged from component evaluation and system tuning to wind-noise investigation, microphone layout analysis,
+      and validation planning across 10+ usage scenarios. I am comfortable moving between user scenarios, technical tradeoffs,
+      and cross-functional iteration with mechanical and software teams.
+    - >-
+      Beyond internships, I have led interactive hardware prototypes that combine sensing, audio, and user testing. I enjoy
+      turning ambiguous product ideas into working systems, learning from real user feedback, and pushing concepts toward
+      product-worthy decisions rather than stopping at research.
+skills:
+  title: Skills
+  categories:
+    - label: Product
+      items:
+        - Product definition
+        - User scenario analysis
+        - Validation planning
+        - Comparative testing
+        - Cross-functional collaboration
+        - Iterative decision-making
+    - label: Hardware
+      items:
+        - Microphones & speakers
+        - Codecs & power amplifiers
+        - Acoustic/mechanical integration
+        - Cavity structure analysis
+        - Material selection
+        - System debugging
+    - label: Prototyping
+      items:
+        - Prototype building
+        - Sensing systems
+        - Experimental design
+        - Failure investigation
+        - Multi-scenario validation
+        - Real-time audio interfaces
+    - label: Tools
+      items:
+        - SoundCheck
+        - Audio Precision
+        - ABTECH
+        - REW
+        - Adobe Audition
+        - AutoCAD
+        - Siemens NX
+        - Python
+experience:
+  title: Experience
+  resume_label: ""
+  jobs:
+    - company: Insta360
+      url: https://www.insta360.com/
+      time: Aug 2025 - Nov 2025
+      position: Audio Hardware Intern
+    - company: Hikvision
+      url: https://www.hikvision.com/
+      time: Jun 2025 - Aug 2025
+      position: Audio Engineering Intern
+    - company: SUSTech Immersive Design Group
+      url: https://designschool.sustech.edu.cn/cn/research
+      time: Aug 2024 - Aug 2025
+      position: Project Lead, Interactive Audio Prototype
+featured_projects:
+  title: Featured Work
+  items:
+    - class_name: hearing-material
+      layout: single
+      name: "Hearing Material: VR Material Perception Through Audio"
+      url: https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00127
+      description: >-
+        Led system definition and prototype development for a VR interface that uses auditory feedback to simulate material
+        texture. Built sensing and audio subsystems, designed validation studies, and translated user insight into an
+        interactive concept that resulted in IEEE publications and a patent outcome.
+      images:
+        - src: /img/featured/hearing-material/teaser.png
+          alt: Hearing Material prototype overview
+    - class_name: audio-validation
+      layout: single
+      name: Camera Audio Hardware Validation at Insta360
+      url: https://www.insta360.com/
+      description: >-
+        Supported component evaluation, wind-noise investigation, microphone layout analysis, and 10+ scenario validation
+        for camera products. Worked across acoustic, mechanical, and software tradeoffs to improve real-world pickup quality.
+      images:
+        - src: /img/featured/audio-validation/recording.png
+          alt: Audio hardware validation setup
+    - class_name: flying-microphone
+      layout: single
+      name: Compact Flying Microphone for Conference Scenarios
+      url: https://designschool.sustech.edu.cn/cn/research
+      description: >-
+        Contributed to a portable flying microphone concept for conference environments, focusing on foldable structure design,
+        microphone array integration, and system-level debugging to improve interaction flexibility between speakers and audiences.
+      images:
+        - src: /img/featured/flying-microphone/exhibition.jpg
+          alt: Prototype demonstration and exhibition
+other_projects:
+  title: Additional Experience
+  items:
+    - name: Consumer Audio Tuning at Hikvision
+      url: https://www.hikvision.com/
+      description: >-
+        Supported component selection and tuning for microphones, speakers, and amplifiers across 10+ product types. Analyzed
+        frequency response, THD, output capability, and thermal behavior to inform design choices and acoustic integration.
+      used:
+        - Audio hardware
+        - System tuning
+        - SoundCheck
+        - Audio Precision
+        - Integration
+    - name: Product-Minded Hardware Prototyping
+      url: https://www.immersivedesignresearch.com/
+      description: >-
+        Built working prototypes rather than concept slides, combining sensing boards, enclosures, validation rigs, and
+        comparative testing to de-risk product ideas early and make product decisions with evidence.
+      used:
+        - Prototype building
+        - Testing
+        - Iteration
+        - User validation
+        - System integration
+    - name: Cross-Scenario Hardware Exposure
+      url: https://designschool.sustech.edu.cn/cn/research
+      description: >-
+        Built practical exposure across consumer audio, action cameras, AI hardware, and adjacent automotive contexts, with a
+        focus on translating real usage problems into clearer requirements and more robust hardware decisions.
+      used:
+        - Product thinking
+        - User scenarios
+        - Tradeoffs
+        - Validation
+        - Collaboration
+footer:
+  designed_by: Designed & Built by
+  name: Bocheng Zhong
+  year: "2026"
+social_links:
+  - icon: email
+    label: Email
+    url: mailto:zhongbc87@qq.com
+employment_status:
+  message: Open to hardware product manager opportunities.

@@ -1,0 +1,24 @@
+{% assign lang = page.lang | default: 'en' %}
+{% assign copy = site.data[lang].home %}
+<section id="experience" class="section experience">
+  <div class="section__title">{{ copy.experience.title | escape_once }}</div>
+  <div class="section__content">
+    <div class="jobs">
+      {% for job in copy.experience.jobs %}
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company">
+            <a href="{{ job.url }}" target="_blank">{{ job.company | escape_once }}</a>
+          </div>
+          <div class="job__time">{{ job.time | escape_once }}</div>
+        </div>
+        <div class="job__position">{{ job.position | escape_once }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if copy.experience.resume_label and copy.experience.resume_label != '' and site.resume and site.resume != '' %}
+    <a href="{{ site.resume | relative_url }}" target="_blank" class="arrow-link">{{ copy.experience.resume_label | escape_once }}</a>
+    {% endif %}
+  </div>
+</section>
