@@ -146,16 +146,18 @@ featured_projects:
         interactive system, resulting in 2 conference publications and 1 Chinese invention patent
         publication.
       images:
-        - src: /img/featured/hearing-material/01-h3.jpg
-          alt: Hearing Material physical material recording setup
-        - src: /img/featured/hearing-material/02-hearing-5.png
-          alt: Hearing Material sensing hardware prototype
-        - src: /img/featured/hearing-material/03-reality-virtual.png
-          alt: Hearing Material physical and virtual interaction comparison
-        - src: /img/featured/hearing-material/04-recording.jpg
-          alt: Hearing Material recording session
-        - src: /img/featured/hearing-material/05-synthesizer.jpg
-          alt: Hearing Material hardware prototype
+        - src: /img/bc_figures/hearing_material/1.JPG
+          alt: Hearing Material figure 1
+        - src: /img/bc_figures/hearing_material/2.JPG
+          alt: Hearing Material figure 2
+        - src: /img/bc_figures/hearing_material/3.png
+          alt: Hearing Material figure 3
+        - src: /img/bc_figures/hearing_material/4.png
+          alt: Hearing Material figure 4
+        - src: /img/bc_figures/hearing_material/5.jpg
+          alt: Hearing Material figure 5
+        - src: /img/bc_figures/hearing_material/6.png
+          alt: Hearing Material figure 6
     - class_name: virtual-concert
       layout: gallery
       name: Sound Field Reproduction for Virtual Concerts
