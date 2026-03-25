@@ -8,7 +8,9 @@
     <article class="project {{ project.class_name }}">
       <div class="project__header">
         <div class="project__name">
-          {% if project.url and project.url != '' %}
+          {% if project.name_html and project.name_html != '' %}
+          {{ project.name_html }}
+          {% elsif project.url and project.url != '' %}
           <a href="{{ project.url }}" target="_blank" rel="noreferrer">{{ project.name | escape_once }}</a>
           {% else %}
           <span>{{ project.name | escape_once }}</span>
@@ -16,19 +18,6 @@
         </div>
         <div class="project__summary">
           <p>{{ project.description }}</p>
-          {% if project.references and project.references.size > 0 %}
-          <div class="project__references">
-            {% for reference in project.references %}
-            <span class="project__reference">
-              {% if reference.url and reference.url != '' %}
-              <a href="{{ reference.url }}" target="_blank" rel="noreferrer">{{ reference.label | escape_once }}</a>
-              {% else %}
-              <span>{{ reference.label | escape_once }}</span>
-              {% endif %}
-            </span>{% unless forloop.last %}<span class="project__reference-divider" aria-hidden="true">/</span>{% endunless %}
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
       </div>
       <figure class="project__pic{% if project.layout == 'phones' %} phones{% elsif project.layout == 'gallery' %} gallery{% endif %}">

@@ -130,6 +130,10 @@ featured_projects:
   items:
     - class_name: hearing-material
       layout: gallery
+      name_html: >-
+        <a href="https://ieeexplore.ieee.org/document/11236101" target="_blank" rel="noreferrer">Hearing Material</a> /
+        <a href="https://ieeexplore.ieee.org/document/10972862" target="_blank" rel="noreferrer">Auditory Materiality</a>:
+        Dynamic Auditory Feedback for Material Perception in VR
       name: "Hearing Material：基于动态听觉反馈的 VR 材料感知项目"
       url: https://doi.org/10.1109/ISMAR-Adjunct68609.2025.00127
       description: >-
